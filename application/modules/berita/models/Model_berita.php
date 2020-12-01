@@ -1,11 +1,11 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Model_menu extends CI_Model {
+class Model_berita extends CI_Model {
  
     var $table = 't_berita'; //nama tabel dari database
-    var $column_order = array(null); //field yang ada di table user
-    var $column_search = array('judl_berita'); //field yang diizin untuk pencarian 
+    var $column_order = array(null,null,'judul_berita','ulasan_berita','tanggal_berita','isi_berita',null); //field yang ada di table user
+    var $column_search = array('judul_berita'); //field yang diizin untuk pencarian 
     var $order = array('id_berita' => 'asc'); // default order 
  
     public function __construct()

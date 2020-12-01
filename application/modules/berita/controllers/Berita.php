@@ -5,7 +5,7 @@ class Berita extends MX_Controller {
 
 	function __construct(){
         parent::__construct();
-        $this->load->model('model_menu','m_menu');
+        $this->load->model('model_berita','m_b');
         cek_login();
         
     }
@@ -29,7 +29,7 @@ class Berita extends MX_Controller {
 
 	 function get_data()
     {
-        $list = $this->m_menu->get_datatables();
+        $list = $this->m_b->get_datatables();
         $data = array();
         $no = $_POST['start'];
         foreach ($list as $field) {
@@ -51,8 +51,8 @@ class Berita extends MX_Controller {
  
         $output = array(
             "draw" => $_POST['draw'],
-            "recordsTotal" => $this->m_menu->count_all(),
-            "recordsFiltered" => $this->m_menu->count_filtered(),
+            "recordsTotal" => $this->m_b->count_all(),
+            "recordsFiltered" => $this->m_b->count_filtered(),
             "data" => $data,
         );
         //output dalam format JSON
@@ -125,7 +125,7 @@ class Berita extends MX_Controller {
         
         $data['kategori_berita'] = $this->db->get('t_kategoriberita')->result();
 
-        $data['get_berita'] = $this->m_menu->getedit($id_berita)->row(); 
+        $data['get_berita'] = $this->m_b->getedit($id_berita)->row(); 
 
         $this->load->view('viewtambahan/v_modaledit',$data);
     }

@@ -125,25 +125,26 @@
             <div class="header-inner">
                 <!-- Navbar Starts -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="singlepage-nav">
-                
                       <a class="navbar-brand" href="#">Navbar</a>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
                         <span class="navbar-toggler-icon"></span>
                       </button>
-                  <div class="collapse navbar-collapse" id="main_nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"> <a class="nav-link" href="#"> <i class="fa fa-home"></i> Home </a> </li>
-                    <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-user"></i> About </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-cog"></i> Services </a></li>
-                    <li class="nav-item dropdown">
-                       <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  More items  </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-                            <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                    <div class="collapse navbar-collapse" id="main_nav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active"> <a class="nav-link" href="#"> <i class="fa fa-home"></i> Beranda </a> </li>
+                            <li class="nav-item dropdown">
+                               <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-user"></i> Profile  </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"> Struktur Organisasi</a></li>
+                                    <li><a class="dropdown-item" href="#"> Tugas dan Fungsi </a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-cog"></i> Berita </a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-cog"></i> Karir </a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-cog"></i> katalog file </a></li>
+                         
                         </ul>
-                    </li>
-                </ul>
-                  </div> <!-- navbar-collapse.// -->
+                     </div> <!-- navbar-collapse.// -->
                 </nav>
                 <!-- Navbar Ends -->
             </div>
