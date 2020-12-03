@@ -125,29 +125,26 @@ class Management_menu extends MX_Controller {
     }
 
      public function editmenu(){
+        // echo $this->input->post('menu_aktif');
+        // echo $this->input->post('parent_menu');
 
-        // $this->form_validation->set_rules('groupmenu','Group menu','required');
         $this->form_validation->set_rules('icon', 'Icon', 'trim|required');
         $this->form_validation->set_rules('nama_menu', 'Nama Menu', 'trim|required');
         $this->form_validation->set_rules('url', 'Url', 'trim|required');
         $this->form_validation->set_rules('icon', 'Icon', 'trim|required');
-        // $this->form_validation->set_rules('aktif', 'Aktif', 'trim|required');
 
         if ($this->form_validation->run() == false) {
             echo json_encode(['status' => false, 'pesan' => validation_errors()]);
         } else {
             # code...
-            // $icon = htmlspecialchars($this->input->post('icon'));
             $id_menu = $this->input->post('id_menu');
             $nama_menu = htmlspecialchars($this->input->post('nama_menu'));
             $parent_menu =$this->input->post('parent_menu');
-            // $groupmenu = $this->input->post('groupmenu');
             $url = htmlspecialchars($this->input->post('url'));
             $icon = htmlspecialchars($this->input->post('icon'));
             $menu_aktif = htmlspecialchars($this->input->post('menu_aktif'));
 
             $data = [
-                // 'tsm_menu_id' => $groupmenu,
                 'parent_menu' => $parent_menu,
                 'nama_menu' => $nama_menu,
                 'url' => $url,

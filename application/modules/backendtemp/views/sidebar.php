@@ -52,6 +52,7 @@
              $this->db->join('base_menurole', 'base_menurole.mr_id_menu = base_menu.id_menu', 'left'); 
              $this->db->where('mr_id_role', $this->session->userdata('id_role'));
             $this->db->where('parent_menu', 0);
+            $this->db->where('menu_aktif', 1);
             $menu = $this->db->get('base_menu')->result();
             ?>
 
@@ -81,20 +82,20 @@
 
                          ;?>
                     <li class="nav-item <?php if ($cekaktifmenu == $m->id_menu){echo "active";} ?>">
-                      <a data-toggle="collapse" href="#tables" <?php if ($cekaktifmenu != $m->id_menu){echo "colapsed";} ?>>
+                      <a data-toggle="collapse" href="#<?php echo  $m->id_menu ?>" <?php if ($cekaktifmenu != $m->id_menu){echo "colapsed";} ?>>
                         <i class="fas fa-table"></i>
                      
                         <p><?php echo $m->nama_menu ?></p>
                         <span class="caret"></span>
                       </a>
-                      <div class="collapse <?php if ($cekaktifmenu == $m->id_menu){echo "show";} ?>" id="tables">
+                      <div class="collapse <?php if ($cekaktifmenu == $m->id_menu){echo "show";} ?>" id="<?php echo $m->id_menu ?>">
                         <ul class="nav nav-collapse">
                           <?php 
                           $this->db->join('base_menurole', 'base_menurole.mr_id_menu = base_menu.id_menu', 'left'); 
                           $this->db->where('mr_id_role', $this->session->userdata('id_role'));
                           // $this->db->where('parent_menu', 0);
                           $this->db->where('parent_menu', $m->id_menu);
-
+                          $this->db->where('menu_aktif', 1);
                           $sub_menu = $this->db->get('base_menu')->result(); 
                           ?>
                           <?php foreach ($sub_menu as $sm): ?>

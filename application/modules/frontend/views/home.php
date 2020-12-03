@@ -135,12 +135,14 @@
                             <li class="nav-item dropdown">
                                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-user"></i> Profile  </a>
                                 <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?php echo base_url() ?>sejarah"> Sejaran Perusahaan </a></li>
+                                    <li><a class="dropdown-item" href="#"> Visi & Misi </a></li>
                                     <li><a class="dropdown-item" href="#"> Struktur Organisasi</a></li>
-                                    <li><a class="dropdown-item" href="#"> Tugas dan Fungsi </a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-cog"></i> Berita </a></li>
                             <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-cog"></i> Karir </a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-cog"></i> Produk Dan Layanan </a></li>
                             <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-cog"></i> katalog file </a></li>
                          
                         </ul>

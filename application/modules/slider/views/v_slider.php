@@ -12,7 +12,7 @@
 								</div>
 								<div class="card-body">
 
-									<button onclick="tambahmodal()" class="btn btn-primary mb-3">Tambah Menu</button>
+									<button onclick="tambahmodal()" class="btn btn-primary mb-3">Tambah <?php echo $tittle ?></button>
 									<button onclick="reload_table()" class="btn btn-default mb-3">Reload table</button>
 
 									<div class="table-responsive">
