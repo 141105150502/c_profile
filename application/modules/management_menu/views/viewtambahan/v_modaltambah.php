@@ -133,7 +133,7 @@
           <div class="form-group row">
             <label for="menu_aktif" class="col-sm-2 col-form-label">Aktif</label>
             <div class="col-sm-10">
-              <input type="checkbox" name='aktif' class="form-check-input" value="1"  id="menu_aktif" checked="on"> &nbsp;
+              <input type="checkbox" name='menu_aktif' class="form-check-input" value="1"  id="menu_aktif" checked="on"> &nbsp;
               <label class="form-check-label" for="menu_aktif">Aktif</label>
             </div>
           </div>
