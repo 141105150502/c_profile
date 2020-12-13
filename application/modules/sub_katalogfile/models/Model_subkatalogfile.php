@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Model_subkatalogfile extends CI_Model {
  
     var $table = 't_subkatalogfile'; //nama tabel dari database
-    var $column_order = array(null); //field yang ada di table user
-    var $column_search = array('nama_subfile'); //field yang diizin untuk pencarian 
+    var $column_order = array(null,'keterangan_file',null,null); //field yang ada di table user
+    var $column_search = array('keterangan_file'); //field yang diizin untuk pencarian 
     var $order = array('id_subfile' => 'asc'); // default order 
  
     public function __construct()

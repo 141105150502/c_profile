@@ -15,7 +15,9 @@ class Sub_katalogfile extends MX_Controller {
 	public function index()
 	{
 		// $this->load->view('welcome_message');
-		$data['tittle'] = "Sub Katalog File";
+        $this->db->where('id_file', $this->uri->segment(3));
+        $kf = $this->db->get('t_katalogfile')->row()->keterangan_file;
+		$data['tittle'] = "Sub Katalog File". $kf;
 		// data
         $data['id_file'] = $this->uri->segment(3);
 		// enddata
