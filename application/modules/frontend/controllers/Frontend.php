@@ -20,10 +20,16 @@ class Frontend extends CI_Controller {
 	 */
 	public function index()
 	{
-		// $this->load->view('front_header');
-		// $this->load->view('home');
-		// $this->load->view('front_footer');
+		$this->load->view('front_header');
 		$this->load->view('v_frontberanda');
-
+		$this->load->view('front_footer');
 	}
+
+
+	public function berita(){
+ 
+		
+	}
+
+	
 }

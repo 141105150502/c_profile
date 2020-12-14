@@ -1,217 +1,201 @@
- <!-- Footer Section Starts -->
-        <footer class="footer text-center">
-            <!-- Container Starts -->
+
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-area footer-bg footer-padding">
             <div class="container">
-                <!-- Copyright Text Starts -->
-                <p>Salimo - One Page Parallax</p>
-                <p>
-                    &copy; Copyright 2017 Salimo & Designed with <span class="heart">&#10084;</span> by <a target="_blank" href="http://themeforest.net/user/celtano/">Celtano</a>
-                </p>
-                <!-- Copyright Text Ends -->
-                <!-- Social Media Links Starts -->
-                <div class="social-icons">
-                    <ul class="social">
-                        <li>
-                            <a class="twitter" href="#" title="twitter"></a>
-                        </li>
-                        <li>
-                            <a class="facebook" href="#" title="facebook"></a>
-                        </li>
-                        <li>
-                            <a class="google" href="#" title="google"></a>
-                        </li>
-                        <li>
-                            <a class="skype" href="#" title="skype"></a>
-                        </li>
-                        <li>
-                            <a class="instagram" href="#" title="instagram"></a>
-                        </li>
-                        <li>
-                            <a class="linkedin" href="#" title="linkedin"></a>
-                        </li>
-                        <li>
-                            <a class="youtube" href="#" title="youtube"></a>
-                        </li>
-                    </ul>
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                       <div class="single-footer-caption mb-50">
+                         <div class="single-footer-caption mb-30">
+                             <div class="footer-tittle">
+                                 <h4>About Us</h4>
+                                 <div class="footer-pera">
+                                     <p>Heaven frucvitful doesn't cover lesser dvsays appear creeping seasons so behold.</p>
+                                </div>
+                             </div>
+                         </div>
+
+                       </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Contact Info</h4>
+                                <ul>
+                                    <li>
+                                    <p>Address :Your address goes
+                                        here, your demo address.</p>
+                                    </li>
+                                    <li><a href="#">Phone : +8880 44338899</a></li>
+                                    <li><a href="#">Email : info@colorlib.com</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Important Link</h4>
+                                <ul>
+                                    <li><a href="#"> View Project</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Testimonial</a></li>
+                                    <li><a href="#">Proparties</a></li>
+                                    <li><a href="#">Support</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Newsletter</h4>
+                                <div class="footer-pera footer-pera2">
+                                 <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+                             </div>
+                             <!-- Form -->
+                             <div class="footer-form" >
+                                 <div id="mc_embed_signup">
+                                     <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                     method="get" class="subscribe_form relative mail_part">
+                                         <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                                         class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                         onblur="this.placeholder = ' Email Address '">
+                                         <div class="form-icon">
+                                             <button type="submit" name="submit" id="newsletter-submit"
+                                             class="email_icon newsletter-submit button-contactForm"><img src="<?php echo base_url() ?>assets/frontend_temp/assets/img/icon/form.png" alt=""></button>
+                                         </div>
+                                         <div class="mt-10 info"></div>
+                                     </form>
+                                 </div>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Social Media Links Ends -->
+               <!--  -->
+               <div class="row footer-wejed justify-content-between">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <!-- logo -->
+                        <div class="footer-logo mb-20">
+                        <a href="index.html"><img src="<?php echo base_url() ?>assets/frontend_temp/assets/img/logo/logo2_footer.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="footer-tittle-bottom">
+                        <span>5000+</span>
+                        <p>Talented Hunter</p>
+                    </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="footer-tittle-bottom">
+                            <span>451</span>
+                            <p>Talented Hunter</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <!-- Footer Bottom Tittle -->
+                        <div class="footer-tittle-bottom">
+                            <span>568</span>
+                            <p>Talented Hunter</p>
+                        </div>
+                    </div>
+               </div>
             </div>
-            <!-- Container Ends -->
-        </footer>
-        <!-- Footer Section Starts -->
-        <!-- Back To Top Starts -->
-        <div id="back-top-wrapper" class="d-none d-sm-block">
-            <p id="back-top">
-                <a href="index.html#top"><span></span></a>
-            </p>
         </div>
-        <!-- Back To Top Ends -->
-    </div>
-    <!-- Wrapper Ends -->
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area footer-bg">
+            <div class="container">
+                <div class="footer-border">
+                     <div class="row d-flex justify-content-between align-items-center">
+                         <div class="col-xl-10 col-lg-10 ">
+                             <div class="footer-copy-right">
+                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                             </div>
+                         </div>
+                         <div class="col-xl-2 col-lg-2">
+                             <div class="footer-social f-right">
+                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                 <a href="#"><i class="fab fa-twitter"></i></a>
+                                 <a href="#"><i class="fas fa-globe"></i></a>
+                                 <a href="#"><i class="fab fa-behance"></i></a>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
 
-    <!-- Template JS Files -->
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/jquery.easing.1.3.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAFnEvJfyoQ8unR5hK1u87h73EdYP46-hE"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/jquery.bxslider.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/jquery.filterizr.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/jquery.singlePageNav.min.js"></script>
+  <!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/popper.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/jquery.slicknav.min.js"></script>
 
-    <!-- Revolution Slider Main JS Files -->
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/owl.carousel.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/slick.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/price_rangs.js"></script>
+        
+		<!-- One Page, Animated-HeadLin -->
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/wow.min.js"></script>
+		<script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/animated.headline.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/jquery.magnific-popup.js"></script>
 
-    <!-- Revolution Slider Extensions -->
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/jquery.scrollUp.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/jquery.nice-select.min.js"></script>
+		<script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/contact.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/jquery.form.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/jquery.validate.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/mail-script.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/plugins.js"></script>
+        <script src="<?php echo base_url() ?>assets/frontend_temp/assets/js/main.js"></script>
 
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-
-    <!-- Live Style Switcher JS File - only demo -->
-    <!-- <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/styleswitcher.js"></script> -->
-
-    <!-- Main JS Initialization File -->
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/templatefrontend/demos/js/custom.js"></script>
-
-    <!-- Revolution Slider Initialization Starts -->
-    <script>
-        (function() {
-            "use strict";
-			// REVOLUTION SLIDER
-            var tpj = jQuery;
-            var revapi4;
-            tpj(document).ready(function() {
-                if (tpj("#rev_slider").revolution == undefined) {
-                    revslider_showDoubleJqueryError("#rev_slider");
-                } else {
-                    revapi4 = tpj("#rev_slider").show().revolution({
-                        sliderType: "standard",
-                        jsFileLocation: "js/plugins/revolution/js/",
-                        dottedOverlay: "none",
-                        sliderLayout: "fullscreen",
-                        delay: 9000,
-                        navigation: {
-                            keyboardNavigation: "off",
-                            keyboard_direction: "horizontal",
-                            mouseScrollNavigation: "off",
-                            onHoverStop: "off",
-                            touch: {
-                                touchenabled: "on",
-                                swipe_threshold: 75,
-                                swipe_min_touches: 1,
-                                swipe_direction: "horizontal",
-                                drag_block_vertical: false
-                            },
-                            arrows: {
-                                style: "zeus",
-                                enable: true,
-                                hide_onmobile: true,
-                                hide_under: 600,
-                                hide_onleave: true,
-                                hide_delay: 200,
-                                hide_delay_mobile: 1200,
-                                tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
-                                left: {
-                                    h_align: "left",
-                                    v_align: "center",
-                                    h_offset: 90,
-                                    v_offset: 0
-                                },
-                                right: {
-                                    h_align: "right",
-                                    v_align: "center",
-                                    h_offset: 90,
-                                    v_offset: 0
-                                }
-                            },
-                            bullets: {
-                                enable: false,
-                                hide_onmobile: true,
-                                hide_under: 600,
-                                style: "metis",
-                                hide_onleave: true,
-                                hide_delay: 200,
-                                hide_delay_mobile: 1200,
-                                direction: "horizontal",
-                                h_align: "center",
-                                v_align: "bottom",
-                                h_offset: 0,
-                                v_offset: 30,
-                                space: 5,
-                                tmp: '<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span>'
-                            }
-                        },
-                        viewPort: {
-                            enable: true,
-                            outof: "pause",
-                            visible_area: "80%"
-                        },
-                        responsiveLevels: [1240, 1024, 778, 480],
-                        gridwidth: [1240, 1024, 778, 480],
-                        gridheight: [600, 600, 500, 400],
-                        lazyType: "none",
-                        parallax: {
-                            type: "mouse",
-                            origo: "slidercenter",
-                            speed: 2000,
-                            levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
-                        },
-                        shadow: 0,
-                        spinner: "off",
-                        stopLoop: "off",
-                        stopAfterLoops: -1,
-                        stopAtSlide: -1,
-                        shuffle: "off",
-                        hideThumbsOnMobile: "off",
-                        autoHeight: "off",
-                        hideSliderAtLimit: 0,
-                        hideCaptionAtLimit: 0,
-                        hideAllCaptionAtLilmit: 0,
-                        debugMode: false,
-                        fallbacks: {
-                            simplifyAll: "off",
-                            nextSlideOnWindowFocus: "off",
-                            disableFocusListener: false,
-                        }
-                    });
+        <script>
+            $('.owl-carousel').owlCarousel({
+                iitems:4,
+                loop:true,
+                margin:10,
+                autoplay:true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:false
+                    },
+                    600:{
+                        items:3,
+                        nav:false
+                    },
+                    1000:{
+                        items:5,
+                        nav:false,
+                        loop:true
+                    }
                 }
-            });
-			
-			// GOOGLE MAP
-			function init_map() {
-				
-				var myOptions = {
-					scrollwheel: false,
-					zoom: 12,
-					center: new google.maps.LatLng(40.7127837, -74.00594130000002),
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				};
-				var map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-				var marker = new google.maps.Marker({
-					map: map,
-					icon: "<?php echo base_url() ?>assets/templatefrontend/demos/img/markers/orange.png",
-					position: new google.maps.LatLng(40.7127837, -74.00594130000002)
-				});
-				var infowindow = new google.maps.InfoWindow({
-					content: "<strong>SALIMO</strong><br>1234 Disney Street, New York City<br>"
-				});
-				google.maps.event.addListener(marker, "click", function() {
-					infowindow.open(map, marker);
-				});
-			}
-			google.maps.event.addDomListener(window, "load", init_map);
-			
-        })(jQuery);
-    </script>
-    <!-- Revolution Slider Initialization Ends -->
-</body>
+            })
 
+
+        </script>
+        
+    </body>
 </html>
