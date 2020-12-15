@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Frontend extends CI_Controller {
+class Frontend extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -20,16 +21,15 @@ class Frontend extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['slide'] = $this->db->get('t_slider')->result();
+
 		$this->load->view('front_header');
-		$this->load->view('v_frontberanda');
+		$this->load->view('v_frontberanda', $data);
 		$this->load->view('front_footer');
 	}
 
 
-	public function berita(){
- 
-		
+	public function berita()
+	{
 	}
-
-	
 }
