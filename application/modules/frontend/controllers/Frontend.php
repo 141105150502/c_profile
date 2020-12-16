@@ -22,6 +22,10 @@ class Frontend extends CI_Controller
 	public function index()
 	{
 		$data['slide'] = $this->db->get('t_slider')->result();
+		$data['profile']= $this->db->get('t_profileperusahaan')->row();
+		$data['prdoukkami'] = $this->db->get('t_produk',10)->result();
+		$this->db->order_by('tanggal_berita', 'desc');
+		$data['beritaterbaru'] = $this->db->get('t_berita',6)->result();
 
 		$this->load->view('front_header');
 		$this->load->view('v_frontberanda', $data);
@@ -29,7 +33,5 @@ class Frontend extends CI_Controller
 	}
 
 
-	public function berita()
-	{
-	}
+
 }

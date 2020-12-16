@@ -6,19 +6,29 @@
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <?php
+                $aktif1 = 0;
+                 foreach ($slide as $s1): ?>
+                <li data-target="#<?php echo $s1->id_slider ?>" data-slide-to="<?php echo $aktif1 ?>" <?php if ($aktif1 == 0){echo 'class="active"'; $aktif1++;} ?>></li>
+             <!--    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+                    
+                <?php endforeach ?>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://placehold.it/1400x500" alt="First slide">
+                <?php 
+                $aktif2 = 0;
+                $slide2 = $this->db->get('t_slider')->result();
+                foreach ($slide2 as $s2) {
+                 ?>
+                <div class="carousel-item <?php if($aktif2 == 0){echo "active";} ?>">
+                    <img class="d-block w-100" src="<?php echo base_url('assets/gambar/slider/').$s2->gambar_slider; ?>" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="mb-30">sadsad sakdsad sadsad</h2>
-                        <p>sadsa lsamdklsa lkasmdlas</p>
+                        <h2 class="mb-30"><?php echo $s2->judul_slider; ?></h2>
+                        <p><?php echo $s2->minitext_slider; ?></p>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <!-- <div class="carousel-item">
                     <img class="d-block w-100" src="http://placehold.it/1400x500" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h2>sadsad sakdsad sadsad</h2>
@@ -31,7 +41,9 @@
                         <h2>sadsad sakdsad sadsad</h2>
                         <p>sadsa lsamdklsa lkasmdlas</p>
                     </div>
-                </div>
+                </div> -->
+
+                <?php $aktif2++; } ?>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -117,23 +129,21 @@
                         <!-- Section Tittle -->
                         <div class="section-tittle section-tittle2">
                             <span>What we are doing</span>
-                            <h2>24k Talented people are getting Jobs</h2>
+                            <h2><?php echo $profile->nama_perusahaan ?></h2>
                         </div>
                         <div class="support-caption">
 
-                            <p>Mollit anim laborum.Duis aute irufg dhjkolohr in re voluptate velit esscillumlore eu
-                                quife nrulla parihatur. Excghcepteur signjnt occa cupidatat non inulpadeserunt mollit
-                                aboru. temnthp incididbnt ut labore mollit anim laborum suis aute.</p>
-                            <a href="about.html" class="btn post-btn">Post a job</a>
+                            <p><?php echo $profile->deskrip_singkat ?></p>
+                            <a href="about.html" class="btn post-btn">Profile Selengkapnya</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6">
                     <div class="support-location-img">
-                        <img src="http://placehold.it/60x60" alt="">
+                        <img src="http://placehold.it/60x40" alt="">
                         <div class="support-img-cap text-center">
-                            <p>Since</p>
-                            <span>1994</span>
+                            <p>Sejak</p>
+                            <span><?php echo date('Y',strtotime($profile->tanggal_beridiri))?></span>
                         </div>
                     </div>
                 </div>
@@ -154,13 +164,16 @@
                         <h2 style="margin-bottom: 5px !important;"> Produk Kami</h2>
                     </div>
                     <div class="owl-carousel owl-theme mb-20">
-                        <div class="item"><img src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img src="http://placehold.it/120x100" alt=""></div>
+                        <?php foreach ($prdoukkami as $pr): ?>
+                        <div class="item"><img width="150px" height="150px" src="<?php echo base_url() ?>assets/gambar/produk/<?php echo $pr->gambar_produk ?>" alt=""></div>
+                            
+                        <?php endforeach ?>
+                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
+                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
+                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
+                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
+                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
+                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
 
                     </div>
                 </div>
@@ -185,27 +198,28 @@
                 </div>
             </div>
             <div class="row">
+                <?php foreach ($beritaterbaru as $bt): ?>
                 <div class="col-xl-4 col-lg-4 col-md-4">
                     <div class="home-blog-single mb-30">
                         <div class="blog-img-cap">
                             <div class="blog-img">
-                                <img src="<?php echo base_url() ?>assets/frontend_temp/assets/img/blog/home-blog1.jpg"
-                                    alt="">
+                                <img width="370" height="210" src="<?php echo base_url() ?>assets/gambar/berita/<?php echo $bt->gambar_berita ?>">
                                 <!-- Blog date -->
                                 <div class="blog-date text-center">
-                                    <span>24</span>
-                                    <p>Now</p>
+                                    <!-- <span>3</span> -->
+                                    <p> 3 jam yang lalu</p>
                                 </div>
                             </div>
                             <div class="card-body border">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title"><?php echo substr($bt->judul_berita,0,35)."...";  ?></h5>
+                                <p class="card-text"><?php echo (str_word_count($bt->ulasan_berita) >12 ? substr($bt->ulasan_berita,0,100).".." : $bt->ulasan_berita) ; ?></p>
+                                <a href="#" class="btn btn-primary">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                    
+                <?php endforeach ?>
                 <div class="col-xl-4 col-lg-4 col-md-4">
                     <div class="home-blog-single mb-30">
                         <div class="blog-img-cap">
@@ -219,7 +233,7 @@
                                 </div>
                             </div>
                             <div class="card-body border">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">1111111111111111111111111</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
