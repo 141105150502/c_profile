@@ -53,7 +53,9 @@
         
         <a href="index.html" class="logo">
           <!-- <img src="<?php echo base_url() ?>assets/img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
-          <span style="color: white; font-weight: bold; font-size: 24px;">Aplikasi ku</span>
+          <?php $lg = $this->db->get('t_profileperusahaan')->row()->logo_perusahaan; ?>
+          <img src="<?php echo base_url() ?>assets/gambar/profile_perusahaan/<?php echo $lg; ?>" alt="navbar brand" class="navbar-brand" width="108px">
+          <!-- <span style="color: white; font-weight: bold; font-size: 24px;">Aplikasi ku</span> -->
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">

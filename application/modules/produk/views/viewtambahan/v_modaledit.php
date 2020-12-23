@@ -17,8 +17,11 @@
             </div>
             <div class="form-group row">
               <label for="gambar_produk" class="col-sm-2 col-form-label">Gambar Produk</label>
-              <div class="col-sm-10">
+              <div class="col-sm-3">
                 <input type="file" placeholder="Gambar Berita" name="gambar_produk" id="gambar_produk">
+              </div>
+              <div class="col-sm-7">
+                <span class="badge badge-warning">Note : maxsiaml 2 Mb, ukuran gambar 570 x 350 pixel. </span>
               </div>
             </div>
 

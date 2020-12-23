@@ -23,8 +23,8 @@
                  ?>
                 <div class="carousel-item <?php if($aktif2 == 0){echo "active";} ?>">
                     <img class="d-block w-100" src="<?php echo base_url('assets/gambar/slider/').$s2->gambar_slider; ?>" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2 class="mb-30"><?php echo $s2->judul_slider; ?></h2>
+                    <div class="carousel-caption d-none d-md-block  mb-100">
+                        <h1 class=" text-capitalize font-weight-bold"><?php echo $s2->judul_slider; ?></h1>
                         <p><?php echo $s2->minitext_slider; ?></p>
                     </div>
                 </div>
@@ -133,14 +133,14 @@
                         </div>
                         <div class="support-caption">
 
-                            <p><?php echo $profile->deskrip_singkat ?></p>
+                            <p><?php echo $profile->deskripsi_singkat ?></p>
                             <a href="about.html" class="btn post-btn">Profile Selengkapnya</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6">
                     <div class="support-location-img">
-                        <img src="http://placehold.it/60x40" alt="">
+                        <img src="<?php echo base_url() ?>assets/gambar/profile_perusahaan/<?php echo $profile->gambar_perusahaan ?>" alt="">
                         <div class="support-img-cap text-center">
                             <p>Sejak</p>
                             <span><?php echo date('Y',strtotime($profile->tanggal_beridiri))?></span>
@@ -165,15 +165,15 @@
                     </div>
                     <div class="owl-carousel owl-theme mb-20">
                         <?php foreach ($prdoukkami as $pr): ?>
-                        <div class="item"><img width="150px" height="150px" src="<?php echo base_url() ?>assets/gambar/produk/<?php echo $pr->gambar_produk ?>" alt=""></div>
+                        <div class="item"><img width="240px" height="200px" src="<?php echo base_url() ?>assets/gambar/produk/<?php echo $pr->gambar_produk ?>" alt=""></div>
                             
                         <?php endforeach ?>
-                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
-                        <div class="item"><img width="150px" height="150px" src="http://placehold.it/120x100" alt=""></div>
+                       <!--  <div class="item"><img width="240px" height="200px" src="http://placehold.it/240pxx200" alt=""></div>
+                        <div class="item"><img width="240px" height="200px" src="http://placehold.it/240pxx200" alt=""></div>
+                        <div class="item"><img width="240px" height="200px" src="http://placehold.it/240pxx200" alt=""></div>
+                        <div class="item"><img width="240px" height="200px" src="http://placehold.it/240pxx200" alt=""></div>
+                        <div class="item"><img width="240px" height="200px" src="http://placehold.it/240pxx200" alt=""></div>
+                        <div class="item"><img width="240px" height="200px" src="http://placehold.it/240pxx200" alt=""></div> -->
 
                     </div>
                 </div>
@@ -207,27 +207,27 @@
                                 <!-- Blog date -->
                                 <div class="blog-date text-center">
                                     <!-- <span>3</span> -->
-                                    <p> 3 jam yang lalu</p>
+                                    <p><?php echo  time_since(strtotime($bt->tanggal_berita)) ?></p>
                                 </div>
                             </div>
                             <div class="card-body border">
                                 <h5 class="card-title"><?php echo substr($bt->judul_berita,0,35)."...";  ?></h5>
-                                <p class="card-text"><?php echo (str_word_count($bt->ulasan_berita) >12 ? substr($bt->ulasan_berita,0,100).".." : $bt->ulasan_berita) ; ?></p>
-                                <a href="#" class="btn btn-primary">Selengkapnya</a>
+                                <p class="card-text"><?php echo (str_word_count($bt->ulasan_berita) >12 ? substr($bt->ulasan_berita,0,115).".." : $bt->ulasan_berita) ; ?></p>
+                                <a href="<?php echo base_url() ?>frontend/detile_berita/<?php echo $bt->id_berita ?>" class="btn btn-primary">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                    
+                   
                 <?php endforeach ?>
-                <div class="col-xl-4 col-lg-4 col-md-4">
+            <!--     <div class="col-xl-4 col-lg-4 col-md-4">
                     <div class="home-blog-single mb-30">
                         <div class="blog-img-cap">
                             <div class="blog-img">
                                 <img src="<?php echo base_url() ?>assets/frontend_temp/assets/img/blog/home-blog2.jpg"
-                                    alt="">
+                                    alt=""> -->
                                 <!-- Blog date -->
-                                <div class="blog-date text-center">
+                               <!--  <div class="blog-date text-center">
                                     <span>24</span>
                                     <p>Now</p>
                                 </div>
@@ -240,34 +240,22 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4">
-                    <div class="home-blog-single mb-30">
-                        <div class="blog-img-cap">
-                            <div class="blog-img">
-                                <img src="<?php echo base_url() ?>assets/frontend_temp/assets/img/blog/home-blog2.jpg"
-                                    alt="">
-                                <!-- Blog date -->
-                                <div class="blog-date text-center">
-                                    <span>24</span>
-                                    <p>Now</p>
-                                </div>
-                            </div>
-                            <div class="card-body border">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
+                
 
-                <div class="row mx-auto">
-                    <div class="col-lg-12">
-                        <div class="browse-btn2 text-center mt-50 mb-20">
-                            <a href="job_listing.html" class="border-btn2">Berita Lainnya</a>
-                        </div>
+             
+            </div>
+
+           
+              
+
+
+
+
+            <div class="row mx-auto">
+                <div class="col-lg-12">
+                    <div class="browse-btn2 text-center mt-50 mb-20">
+                        <a href="<?php echo base_url() ?>frontend/list_berita" class="border-btn2">Berita Lainnya</a>
                     </div>
                 </div>
             </div>

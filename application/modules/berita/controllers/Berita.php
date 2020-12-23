@@ -151,21 +151,45 @@ class Berita extends MX_Controller {
                 $id_berita = $this->input->post('id_berita');
             if ($_FILES['gambar_berita']['name'] != '') {
 
+                $nmfile = "berita_".time(); //nama file + fungsi time
 
                 $config['upload_path'] = './assets/gambar/berita';
                 $config['allowed_types'] = 'gif|jpg|png';
                 $config['max_size']  = '1000';
                 $config['max_width']  = '1024';
                 $config['max_height']  = '768';
+                $config['file_name'] = $nmfile; //nama yang terupload nantinya
+
                 
                 $this->load->library('upload', $config);
                 
                 if ($this->upload->do_upload('gambar_berita')){
-            
-                    unlink('./assets/gambar/berita/'.$this->input->post('gambar_beritalama'));
 
-                    $gambar_berita = $this->upload->data('file_name');
-                }
+                    if (file_exists('assets/gambar/berita'.$this->input->post('gambar_beritalama'))) {
+                        # code...
+                        unlink('./assets/gambar/berita/'.$this->input->post('gambar_beritalama'));
+                    };
+
+                    $gbr = $this->upload->data();
+                    //Compress Image
+                    $config['image_library']='gd2';
+                    $config['source_image']='./assets/gambar/produk/'.$gbr['file_name'];
+                    $config['create_thumb']= FALSE;
+                    $config['maintain_ratio']= FALSE;
+                    $config['quality']= '50%';
+                    $config['width']= 1500;
+                    $config['height']= 450;
+                    $config['new_image']= './assets/gambar/produk/'.$gbr['file_name'];
+                    $this->load->library('image_lib', $config);
+                    $this->image_lib->resize();
+
+                    $gambar_berita = $gbr['file_name'];
+
+
+            
+
+                    // $gambar_berita = $this->upload->data('file_name');
+                };
 
 
 
@@ -202,7 +226,14 @@ class Berita extends MX_Controller {
     public function hapus($id){
         $this->db->where('id_berita', $id);
         $gambarberita = $this->db->get('t_berita')->row()->gambar_berita;
-        unlink('./assets/gambar/berita/'.$gambarberita);
+
+        if ($gambarberita !="") {
+            # code...
+            if (file_exists('./assets/gambar/berita/'.$gambarberita)) {
+                # code...
+                unlink('./assets/gambar/berita/'.$gambarberita);
+            }
+        }
 
 
         $this->db->where('id_berita', $id);

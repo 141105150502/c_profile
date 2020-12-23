@@ -1,4 +1,4 @@
-
+    <?php $profile = $this->db->get('t_profileperusahaan')->row(); ?>
     <footer>
         <!-- Footer Start-->
         <div class="footer-area footer-bg footer-padding">
@@ -8,10 +8,11 @@
                        <div class="single-footer-caption mb-50">
                          <div class="single-footer-caption mb-30">
                              <div class="footer-tittle">
-                                 <h4>About Us</h4>
-                                 <div class="footer-pera">
-                                     <p>Heaven frucvitful doesn't cover lesser dvsays appear creeping seasons so behold.</p>
-                                </div>
+                                 <h4>tentang Kami</h4>
+                                 <ul>
+                                    <li><?php echo  $profile->nama_perusahaan ?></li>
+                                    <li>alamat : <?php echo  $profile->alamat_perusahaan ?></li>
+                                </ul>
                              </div>
                          </div>
 
@@ -20,14 +21,10 @@
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Contact Info</h4>
+                                <h4>Kontak Info</h4>
                                 <ul>
-                                    <li>
-                                    <p>Address :Your address goes
-                                        here, your demo address.</p>
-                                    </li>
-                                    <li><a href="#">Phone : +8880 44338899</a></li>
-                                    <li><a href="#">Email : info@colorlib.com</a></li>
+                                    <li><a href="#">Phone : <?php echo  $profile->telepon_perusahaan ?></a></li>
+                                    <li><a href="#">Email : <?php echo  $profile->email_perusahaan ?></a></li>
                                 </ul>
                             </div>
 
@@ -36,26 +33,24 @@
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Important Link</h4>
+                                <h4>Link</h4>
                                 <ul>
-                                    <li><a href="#"> View Project</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Testimonial</a></li>
-                                    <li><a href="#">Proparties</a></li>
-                                    <li><a href="#">Support</a></li>
+                                    <li><a href="<?php echo base_url() ?>frontend/front_produklayanan">Produk Dan Layanan</a></li>
+                                    <li><a href="<?php echo base_url() ?>frontend/front_kontak">Kontak</a></li>
+                                    <li><a href="<?php echo base_url() ?>frontend/list_berita">Berita</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                   <!--  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
                                 <h4>Newsletter</h4>
                                 <div class="footer-pera footer-pera2">
                                  <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
-                             </div>
+                             </div> -->
                              <!-- Form -->
-                             <div class="footer-form" >
+                            <!--  <div class="footer-form" >
                                  <div id="mc_embed_signup">
                                      <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
                                      method="get" class="subscribe_form relative mail_part">
@@ -72,13 +67,13 @@
                              </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                <!--  -->
-               <div class="row footer-wejed justify-content-between">
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+               <!-- <div class="row footer-wejed justify-content-between">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6"> -->
                         <!-- logo -->
-                        <div class="footer-logo mb-20">
+                       <!--  <div class="footer-logo mb-20">
                         <a href="index.html"><img src="<?php echo base_url() ?>assets/frontend_temp/assets/img/logo/logo2_footer.png" alt=""></a>
                         </div>
                     </div>
@@ -94,14 +89,14 @@
                             <p>Talented Hunter</p>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5"> -->
                         <!-- Footer Bottom Tittle -->
-                        <div class="footer-tittle-bottom">
+                       <!--  <div class="footer-tittle-bottom">
                             <span>568</span>
                             <p>Talented Hunter</p>
                         </div>
                     </div>
-               </div>
+               </div> -->
             </div>
         </div>
         <!-- footer-bottom area -->
@@ -112,16 +107,16 @@
                          <div class="col-xl-10 col-lg-10 ">
                              <div class="footer-copy-right">
                                  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved<!--  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"></a> -->
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                              </div>
                          </div>
                          <div class="col-xl-2 col-lg-2">
                              <div class="footer-social f-right">
-                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                 <a href="#"><i class="fab fa-twitter"></i></a>
-                                 <a href="#"><i class="fas fa-globe"></i></a>
-                                 <a href="#"><i class="fab fa-behance"></i></a>
+                                <?php $cp = $this->db->get('t_profileperusahaan')->row(); ?>
+                                 <a href="<?php echo  $profile->link_facebook ?>"><i class="fab fa-facebook-f"></i></a>
+                                 <a href="<?php echo  $profile->link_twiter ?>"><i class="fab fa-twitter"></i></a>
+                                 <a href="<?php echo  $profile->link_instagram ?>"><i class="fab fa-instagram"></i></a>
                              </div>
                          </div>
                      </div>

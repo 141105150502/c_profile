@@ -131,8 +131,6 @@ class Slider extends MX_Controller {
     }
 
 
-
-
     public function viewmodaledit($id_slider){
         $data['title'] = 'Edit Berita';
         
@@ -160,21 +158,49 @@ class Slider extends MX_Controller {
                 $id_slider = $this->input->post('id_slider');
                 $gambarlama = $this->input->post('gambar_sliderold');
                
+                $nmfile = "slider_".time(); //nama file + fungsi time
                 $config['upload_path'] = './assets/gambar/slider';
                 $config['allowed_types'] = 'gif|jpg|png';
-                $config['max_size']  = '1000';
-                $config['max_width']  = '1024';
-                $config['max_height']  = '768';
+                $config['max_size']  = '2000';
+                $config['max_width']  = '1800';
+                $config['max_height']  = '1000';
+                $config['file_name'] = $nmfile; //nama yang terupload nantinya
+
                 
                 $this->load->library('upload', $config);
                 
                 if ( ! $this->upload->do_upload('gambar_slider')){
                     $error = array('error' => $this->upload->display_errors());
+                    echo $this->upload->display_errors();
+                    // $gambar_slider = 'tes';
+
                 }else{
                     // $data = array('upload_data' => $this->upload->data());
-                    unlink('assets/gambar/slider/'.$gambarlama);
+                    if ($gambarlama != '') {
+                        if (file_exists('assets/gambar/slider/'.$gambarlama)) {
+                            # code...
+                            unlink('assets/gambar/slider/'.$gambarlama);
+                        }
+                        # code...
+                    }
 
-                    $gambar_slider = $this->upload->data('file_name');
+                    $gbr = $this->upload->data();
+                    //Compress Image
+                    $config['image_library']='gd2';
+                    $config['source_image']='./assets/gambar/slider/'.$gbr['file_name'];
+                    $config['create_thumb']= FALSE;
+                    $config['maintain_ratio']= FALSE;
+                    $config['quality']= '50%';
+                    $config['width']= 1500;
+                    $config['height']= 450;
+                    $config['new_image']= './assets/gambar/slider/'.$gbr['file_name'];
+                    $this->load->library('image_lib', $config);
+                    $this->image_lib->resize();
+
+                    $gambar_slider = $gbr['file_name'];
+
+
+                    // $gambar_slider = $this->upload->data('file_name');
                 }
 
                 if ($this->input->post('aktif_slider')) {
@@ -265,7 +291,13 @@ class Slider extends MX_Controller {
     public function hapus($id){
         $this->db->where('id_slider', $id);
         $gambar_slider = $this->db->get('t_slider')->row()->gambar_slider;
-        unlink('./assets/gambar/slider/'.$gambar_slider);
+        if ( $gambar_slider !='') {
+            # code...
+            if (file_exists('./assets/gambar/slider/'.$gambar_slider)) {
+                # code...
+                unlink('./assets/gambar/slider/'.$gambar_slider);
+            }
+        }
 
 
         $this->db->where('id_slider', $id);
@@ -282,11 +314,15 @@ class Slider extends MX_Controller {
 
 
     private function _uploadgambar($gambar_slider){
+        $nmfile = "slider_".time(); //nama file + fungsi time
+
         $config['upload_path'] = './assets/gambar/slider';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['max_size']  = '1000';
-        $config['max_width']  = '1024';
-        $config['max_height']  = '768';
+        $config['max_width']  = '1800';
+        $config['max_height']  = '1000';
+        $config['file_name'] = $nmfile; //nama yang terupload nantinya
+
         
         $this->load->library('upload', $config);
         
@@ -294,8 +330,20 @@ class Slider extends MX_Controller {
             $error = array('error' => $this->upload->display_errors());
         }
         else{
-            // $data = array('upload_data' => $this->upload->data());
-            return $this->upload->data('file_name');
+            $gbr = $this->upload->data();
+            //Compress Image
+            $config['image_library']='gd2';
+            $config['source_image']='./assets/gambar/slider/'.$gbr['file_name'];
+            $config['create_thumb']= FALSE;
+            $config['maintain_ratio']= FALSE;
+            $config['quality']= '50%';
+            $config['width']= 1500;
+            $config['height']= 450;
+            $config['new_image']= './assets/gambar/slider/'.$gbr['file_name'];
+            $this->load->library('image_lib', $config);
+            $this->image_lib->resize();
+
+            return $gbr['file_name'];
         }
     }
 

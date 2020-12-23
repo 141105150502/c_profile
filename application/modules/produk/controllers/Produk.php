@@ -172,9 +172,11 @@ class Produk extends MX_Controller {
         $this->db->where('id_produk', $id);
         $gambar_produk = $this->db->get('t_produk')->row()->gambar_produk;
 
-
-        if (file_exists('./assets/gambar/produk/'.$gambar_produk)) {
-            unlink('./assets/gambar/produk/'.$gambar_produk);
+        if ($gambar_produk != '') {
+            # code...
+            if (file_exists('./assets/gambar/produk/'.$gambar_produk)) {
+                unlink('./assets/gambar/produk/'.$gambar_produk);
+            }
         }
 
 
@@ -192,11 +194,13 @@ class Produk extends MX_Controller {
 
 
     private function _uploadgambar($gambar_produk){
+        $nmfile = "produk_".time(); //nama file + fungsi time
         $config['upload_path'] = './assets/gambar/produk';
         $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size']  = '1000';
+        $config['max_size']  = '2000';
         $config['max_width']  = '1024';
         $config['max_height']  = '768';
+        $config['file_name'] = $nmfile; //nama yang terupload nantinya
         
         $this->load->library('upload', $config);
         
@@ -204,8 +208,22 @@ class Produk extends MX_Controller {
             $error = array('error' => $this->upload->display_errors());
         }
         else{
-            // $data = array('upload_data' => $this->upload->data());
-            return $this->upload->data('file_name');
+
+            $gbr = $this->upload->data();
+            //Compress Image
+            $config['image_library']='gd2';
+            $config['source_image']='./assets/gambar/produk/'.$gbr['file_name'];
+            $config['create_thumb']= FALSE;
+            $config['maintain_ratio']= FALSE;
+            $config['quality']= '50%';
+            $config['width']= 570;
+            $config['height']= 350;
+            $config['new_image']= './assets/gambar/produk/'.$gbr['file_name'];
+            $this->load->library('image_lib', $config);
+            $this->image_lib->resize();
+
+            return $gbr['file_name'];
+            
         }
     }
 

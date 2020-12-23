@@ -58,9 +58,13 @@
                         <div class="col-lg-3 col-md-2">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="index.html"><img
-                                        src="<?php echo base_url() ?>assets/frontend_temp/assets/img/logo/logo.png"
-                                        alt=""></a>
+                               <!--  <a href="index.html">
+                                    <img src="<?php echo base_url() ?>assets/frontend_temp/assets/img/logo/logo.png"alt="">
+                                </a> -->
+                                <?php $lg = $this->db->get('t_profileperusahaan')->row()->logo_perusahaan; ?>
+                                <a href="<?php echo base_url() ?>">
+                                    <img src="<?php echo base_url() ?>assets/gambar/profile_perusahaan/<?php echo $lg; ?>" alt="navbar brand">
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9">
@@ -69,25 +73,25 @@
                                 <div class="main-menu">
                                     <nav class="d-none d-lg-block">
                                         <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="<?php echo base_url() ?>">Home</a></li>
                                             <li><a href="#">Profile</a>
                                                 <ul class="submenu">
-                                                    <li><a href="blog.html">Sejarah Perusahaan</a></li>
-                                                    <li><a href="single-blog.html">Visi dan Misi</a></li>
-                                                    <li><a href="elements.html">Struktur Organisasi</a></li>
-                                                    <li><a href="job_details.html">Kontak</a></li>
+                                                    <li><a href="<?php echo base_url() ?>frontend/front_sejarah">Sejarah Perusahaan</a></li>
+                                                    <li><a href="<?php echo base_url() ?>frontend/front_visimisi">Visi dan Misi</a></li>
+                                                    <li><a href="<?php echo base_url() ?>frontend/front_strukturorg">Struktur Organisasi</a></li>
+                                                    <li><a href="<?php echo base_url() ?>frontend/front_kontak">Kontak</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="job_listing.html">Berita </a></li>
-                                            <li><a href="about.html">karir</a></li>
-                                            <li><a href="about.html">Produk dan Layanan</a></li>
+                                            <li><a href="<?php echo base_url() ?>frontend/list_berita">Berita </a></li>
+                                            <li><a href="<?php echo base_url() ?>frontend/front_karir">karir</a></li>
+                                            <li><a href="<?php echo base_url() ?>frontend/front_produklayanan">Produk dan Layanan</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                                 <!-- Header-btn -->
                                 <div class="header-btn d-none f-right d-lg-block">
-                                    <a href="#" class="btn head-btn1">Register</a>
-                                    <a href="#" class="btn head-btn2">Login</a>
+                                    <a href="<?php echo base_url() ?>auth/register" class="btn head-btn1">Register</a>
+                                    <a href="<?php echo base_url() ?>auth" class="btn head-btn2">Login</a>
                                 </div>
                             </div>
                         </div>

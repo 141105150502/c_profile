@@ -25,8 +25,11 @@
 
           <div class="form-group row">
             <label for="gambar_slider" class="col-sm-2 col-form-label">Gambar Slider</label>
-            <div class="col-sm-10">
-              <img src="<?php echo base_url() ?>assets/gambar/slider/<?php echo $get_slider->gambar_slider ?>"  alt="" width="100px">
+            <div class="col-sm-3">
+              <img class="img-thumbnail" width="100%" src="<?php echo base_url() ?>assets/gambar/slider/<?php echo $get_slider->gambar_slider ?>"  alt="" width="100px">&nbsp;&nbsp;
+            </div>
+            <div class="col-sm-7">
+              <span class="badge badge-warning">Note : maxsiaml 2 Mb, ukuran gambar 1500 x 450 pixel. </span>
             </div>
           </div>
 
