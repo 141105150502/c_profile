@@ -11,7 +11,7 @@
 									<h4 class="card-title"><?php echo $tittle ?></h4>
 								</div>
 								<div class="card-body">
-									<button onclick="tambahmodal()" class="btn btn-primary mb-3">Tambah Menu</button>
+									<button onclick="tambahmodal()" class="btn btn-primary mb-3">Tambah User</button>
 									<button onclick="reload_table()" class="btn btn-default mb-3">Reload table</button>
 									<div class="table-responsive">
 
@@ -165,8 +165,8 @@
 
 	function hapusdata(id){
 	Swal.fire({
-	  title: 'Anda Yakin Menghapus Menu Ini?',
-	  text: "Menu yang anda hapus tidak bisa di kembalikan lagi",
+	  title: 'Anda Yakin Menghapus User Ini?',
+	  text: "User yang anda hapus tidak bisa di kembalikan lagi",
 	  icon: 'warning',
 	  showCancelButton: true,
 	  confirmButtonColor: '#3085d6',

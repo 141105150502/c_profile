@@ -162,8 +162,8 @@
 
 	function hapusdata(id){
 	Swal.fire({
-	  title: 'Anda Yakin Menghapus Menu Ini?',
-	  text: "Menu yang anda hapus tidak bisa di kembalikan lagi",
+	  title: 'Anda Yakin Menghapus Role Ini?',
+	  text: "Role yang anda hapus tidak bisa di kembalikan lagi",
 	  icon: 'warning',
 	  showCancelButton: true,
 	  confirmButtonColor: '#3085d6',

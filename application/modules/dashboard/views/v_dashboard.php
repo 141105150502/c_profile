@@ -30,8 +30,8 @@
 										</div>
 										<div class="col-7 col-stats">
 											<div class="numbers">
-												<p class="card-category">Visitors</p>
-												<h4 class="card-title">1,294</h4>
+												<p class="card-category">Produk</p>
+												<h4 class="card-title"><?php echo $this->db->get('t_produk')->num_rows(); ?></h4>
 											</div>
 										</div>
 									</div>
@@ -49,8 +49,8 @@
 										</div>
 										<div class="col-7 col-stats">
 											<div class="numbers">
-												<p class="card-category">Subscribers</p>
-												<h4 class="card-title">1303</h4>
+												<p class="card-category">Berita</p>
+												<h4 class="card-title"><?php echo $this->db->get('t_berita')->num_rows(); ?></h4>
 											</div>
 										</div>
 									</div>
@@ -68,8 +68,8 @@
 										</div>
 										<div class="col-7 col-stats">
 											<div class="numbers">
-												<p class="card-category">Sales</p>
-												<h4 class="card-title">$ 1,345</h4>
+												<p class="card-category">Slider</p>
+												<h4 class="card-title"><?php echo $this->db->get('t_slider')->num_rows(); ?></h4>
 											</div>
 										</div>
 									</div>
@@ -87,8 +87,8 @@
 										</div>
 										<div class="col-7 col-stats">
 											<div class="numbers">
-												<p class="card-category">Order</p>
-												<h4 class="card-title">576</h4>
+												<p class="card-category">katalog File</p>
+												<h4 class="card-title"><?php echo $this->db->get('t_katalogfile')->num_rows(); ?></h4>
 											</div>
 										</div>
 									</div>

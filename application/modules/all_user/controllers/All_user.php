@@ -100,7 +100,7 @@ class All_user extends MX_Controller {
                         'ur_id_role' => 2];
             $this->db->insert('base_userrole',$datauserrole);
 
-    		echo json_encode(['status' => true, 'pesan' => 'role baru berhasil di tambahkan']);
+    		echo json_encode(['status' => true, 'pesan' => 'User baru berhasil di tambahkan']);
     	}
     }
 

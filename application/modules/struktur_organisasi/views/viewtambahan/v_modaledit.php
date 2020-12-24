@@ -10,10 +10,19 @@
         <form id="formedit" enctype="multipart/form-data">
            <div class="form-group">
             <label for="exampleInputEmail1">Gambar Strutur Organisasi</label>
-            <img src="<?php echo base_url() ?>assets/gambar/profile_perusahaan/<?php echo $result->struktur_organisasigambar ?>" width="100%" alt="">
-            <input type="file" name="struktur_organisasigambar" class="form-control">
-            <input type="hidden" name="id_profileperusahaan" class="form-control" value="<?php echo $result->id_profileperusahaan ?>">
-            <input type="hidden" name="gambar_sturukturold" class="form-control" value="<?php echo $result->struktur_organisasigambar ?>">
+            <div class="row mb-4">
+              <div class="col-md-4">
+                <img src="<?php echo base_url() ?>assets/gambar/profile_perusahaan/<?php echo $result->struktur_organisasigambar ?>" class="img-thumbnail" width="100%" alt="">
+              </div>
+                <div class="col-md-8">
+                  <div class="badge badge-warning mb-2">Note : Ukuran gambar max 2Mb 1170 x 875 pixel</div>
+                  <input type="file" name="struktur_organisasigambar">
+                  <input type="hidden" name="id_profileperusahaan" class="form-control" value="<?php echo $result->id_profileperusahaan ?>">
+                  <input type="hidden" name="gambar_sturukturold" class="form-control" value="<?php echo $result->struktur_organisasigambar ?>">
+                </div>
+            </div>
+           
+              
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Deskripsi Struktur raganisasi</label>

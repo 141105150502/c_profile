@@ -137,8 +137,11 @@ class katalog_file extends MX_Controller {
                 $filelama = $this->input->post('filelama');
                 $nama_file = $this->_uploadgambar('filenya');
                 $id_file = $this->input->post('id_file');
-                if (file_exists('./assets/gambar/katalog_file/'.$filelama)) {
-                    unlink('./assets/gambar/katalog_file/'.$filelama);
+                if ($filelama != '') {
+                    # code...
+                    if (file_exists('./assets/gambar/katalog_file/'.$filelama)) {
+                        unlink('./assets/gambar/katalog_file/'.$filelama);
+                    }
                 }
 
 
