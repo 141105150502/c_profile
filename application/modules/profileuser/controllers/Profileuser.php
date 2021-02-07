@@ -82,12 +82,15 @@ class Profileuser extends MX_Controller {
 	private function do_upload($nameinput, $old_foto){
 
 		
+        $nmfile = "foto_".time(); //nama file + fungsi time
 
-		$config['upload_path'] = './assets/gambar/userimage/';
+		$config['upload_path'] = './assets/gambar/userimage';
 		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']  = '1000';
-		$config['max_width']  = '1024';
-		$config['max_height']  = '768';
+		$config['max_size']  = '2000';
+		$config['max_width']  = '1800';
+		$config['max_height']  = '1800';
+        $config['file_name'] = $nmfile; //nama yang terupload nantinya
+
 		
 		$this->load->library('upload', $config);
 		
@@ -104,7 +107,24 @@ class Profileuser extends MX_Controller {
 				}
 			}
 
-			return $this->upload->data('file_name');
+			   $gbr = $this->upload->data();
+                    //Compress Image
+                $config['image_library']='gd2';
+                $config['source_image']='./assets/gambar/userimage/'.$gbr['file_name'];
+                $config['create_thumb']= FALSE;
+                $config['maintain_ratio']= FALSE;
+                $config['quality']= '50%';
+                $config['width']= 225;
+                $config['height']= 225;
+                $config['new_image']= './assets/gambar/userimage/'.$gbr['file_name'];
+                $this->load->library('image_lib', $config);
+                $this->image_lib->resize();
+
+                $gambar_berita = $gbr['file_name'];
+
+                return $gambar_berita;
+
+			// return $this->upload->data('file_name');
 
 		}
 
@@ -146,7 +166,7 @@ class Profileuser extends MX_Controller {
 
         	if (!password_verify($passwordsaatini,$user->password)) {
         		// echo "password salah";
-	            echo json_encode(['status' => false, 'pesan' => 'Password saat ini yang anda tidak sesuai']);
+	            echo json_encode(['status' => false, 'pesan' => 'Password saat ini tidak sesuai']);
 
         	}else{
         		if ($passwordsaatini == $passwordbaru ) {

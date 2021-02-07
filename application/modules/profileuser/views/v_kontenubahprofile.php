@@ -43,15 +43,17 @@
 							  </div>
 							  <div class="form-group row">
 							    <label for="foto" class="col-sm-2 col-form-label">Foto</label>
-							    <div class="col-sm-10">
+							    <!-- <div class="col-sm-10">
 							      <input type="file" id="foto" name="foto" >
 							      <input type="hidden" id="old_foto" name="old_foto" value="<?php echo $datauser->foto; ?>">
-							    </div>
-							  </div>
-							  <div class="form-group row">
-							    <label for="no_telp" class="col-sm-2 col-form-label"></label>
+							    </div> -->
 							    <div class="col-sm-3">
 							      <img class="img-thumbnail" src="<?php echo base_url() ?>assets/gambar/userimage/<?php echo $datauser->foto; ?>" alt="" style="width: 100px, height:110px;">
+							    </div>
+							    <div class="col-sm-3">
+							    	<div class="badge badge-warning mb-3">Note: ukuran maksisma 2 Mb 500 x 500 pixel</div>
+								    <input type="file" id="foto" name="foto" >
+								    <input type="hidden" id="old_foto" name="old_foto" value="<?php echo $datauser->foto; ?>">
 							    </div>
 							  </div>
 							</form>

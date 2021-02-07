@@ -80,7 +80,7 @@ function time_since($original)
  
   if ($since > 604800)
   {
-    $print = date("M jS", $original);
+    $print = date("d M", $original);
     if ($since > 31536000)
     {
       $print .= ", " . date("Y", $original);

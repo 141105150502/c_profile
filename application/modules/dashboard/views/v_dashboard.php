@@ -8,16 +8,16 @@
 								<h2 class="text-white pb-2 fw-bold">Dashboard</h2>
 								<h5 class="text-white op-7 mb-2">Sistem Core Ku Dashboard</h5>
 							</div>
-							<div class="ml-md-auto py-2 py-md-0">
+							<!-- <div class="ml-md-auto py-2 py-md-0">
 								<a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
 								<a href="#" class="btn btn-secondary btn-round">Add Customer</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
 				<div class="page-inner">
 					<!-- Card -->
-					<h4 class="page-title">Card</h4>
+					<h4 class="page-title">Dashboard</h4>
 					<div class="row">
 						<div class="col-sm-6 col-md-3">
 							<div class="card card-stats card-primary card-round">
@@ -97,7 +97,7 @@
 						</div>
 					</div>
 					<!-- Card With Icon States Color -->
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-sm-6 col-md-3">
 							<div class="card card-stats card-round">
 								<div class="card-body ">
@@ -174,9 +174,9 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- Card With Icon States Background -->
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-sm-6 col-md-3">
 							<div class="card card-stats card-round">
 								<div class="card-body ">
@@ -253,9 +253,9 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- Row Card No Padding -->
-					<div class="row row-card-no-pd">
+					<!-- <div class="row row-card-no-pd">
 						<div class="col-sm-6 col-md-3">
 							<div class="card card-stats card-round">
 								<div class="card-body ">
@@ -332,6 +332,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>

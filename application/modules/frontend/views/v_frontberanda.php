@@ -192,8 +192,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle text-center">
-                        <span>Our latest blog</span>
-                        <h2>Our recent news</h2>
+                        <span>Berita</span>
+                        <h2>Berita terbaru</h2>
                     </div>
                 </div>
             </div>
