@@ -162,6 +162,16 @@ class Management_menu extends MX_Controller {
     }
 
     public function hapus($id){
+        $this->db->where('parent_menu !=', 0);
+        $this->db->where('id_menu', $id);
+        $cekadaparentnyaga = $this->db->get('base_menu')->num_rows();
+
+        if ($cekadaparentnyaga) {
+            echo json_encode(['status' => false, 'pesan' => 'Menu ini adalah menu parent mohon hapus sub Menu dari menu ini terlebih dahulu']);
+            return;
+        }
+
+
         $this->db->where('id_menu', $id);
         $result = $this->db->delete('base_menu');
 

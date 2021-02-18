@@ -192,7 +192,7 @@
     function hapussubmenu(id){
     Swal.fire({
 	  title: 'Yakin menghapus data ini?',
-	  text: "Dat yang di hapus tidak bisa di kembalika kembali",
+	  text: "Data yang di hapus tidak bisa di kembalika kembali",
 	  icon: 'warning',
 	  showCancelButton: true,
 	  confirmButtonColor: '#3085d6',
@@ -216,8 +216,8 @@
 					}else{
 						 Swal.fire({
 						  icon: 'error',
-						  title: 'Oops...',
-						  text: 'Maaf Terjadi Kesalahan',
+						  title: 'Info',
+						  text: respon.pesan,
 						})
 
 					}
