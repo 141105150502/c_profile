@@ -104,7 +104,7 @@
                                 <div class="media post_item">
                                     <img src="<?php echo base_url() ?>assets/gambar/berita/<?php echo $bt->gambar_berita ?>" alt="post" width="80px" height="80px">
                                     <div class="media-body">
-                                        <a href="single-blog.html">
+                                        <a href="<?php echo base_url() ?>frontend/detile_berita/<?php echo $bt->id_berita ?>">
                                             <h3><?php echo (str_word_count($bt->judul_berita) >10 ? substr($bt->judul_berita,0,25).".." : $bt->judul_berita) ;?>    </h3>
                                         </a>
                                         <p><?php echo date('d M Y',strtotime($bt->tanggal_berita)) ?></p>

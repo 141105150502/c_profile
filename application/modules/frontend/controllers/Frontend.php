@@ -169,7 +169,7 @@ class Frontend extends CI_Controller
 
 	public function detile_berita($id_berita){
 		$data['kategori_berita'] = $this->db->get('t_kategoriberita')->result();
-		$data['getberita'] = $this->db->get('t_berita',['id_berita' => $id_berita])->row();
+		$data['getberita'] = $this->db->get_where('t_berita',['id_berita' => $id_berita])->row();
 		$data['judul'] = $data['getberita']->judul_berita;
 
 		$this->load->view('front_header');
